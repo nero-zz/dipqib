@@ -1,0 +1,40 @@
+
+<%#= link_to(image_tag("ruby.png", :mouseover => "ruby_glow.png"), :action => 'ruby') %>
+<%#= link_to(image_tag("perl.png", :mouseover => "perl_glow.png"), :action => 'perl') %>
+<%#= link_to(image_tag("java.png", :mouseover => "java_glow.png"), :action => 'java') %>
+<%#= link_to(image_tag("ps.png", :mouseover => "ps_glow.png"), :action => 'ps') %>
+
+<%#= link_to_remote 'rubyyy', :url => {:action => 'ruby'} %>
+<%#= link_to_remote 'perlll', :url => {:action => 'perl'} %>
+<%#= link_to_remote 'javaaa', :url => {:action => 'java'} %>
+
+
+<% form_remote_tag :url => { :action => :ruby} do %>
+    <%= image_submit_tag("ruby.png",
+      :onmouseover => "this.src='/images/ruby_glow.png'",
+      :onmouseout => "this.src='/images/ruby.png'") %>
+<% end %>
+
+
+<% form_remote_tag :url => { :action => ''} do %>
+    <%= image_submit_tag("java.png", 
+      :onmouseover => "this.src='/images/java_glow.png'",
+      :onmouseout => "this.src='/images/java.png'") %>
+<% end %>
+
+
+<% form_remote_tag :url => { :action => :perl} do %>
+    <%= image_submit_tag("perl.png", 
+      :onmouseover => "this.src='/images/perl_glow.png'",
+      :onmouseout => "this.src='/images/perl.png'") %>
+<% end %>
+
+
+<% form_remote_tag :url => { :action => ''} do %>
+    <%= image_submit_tag("ps.png",
+      :onmouseover => "this.src='/images/ps_glow.png'",
+      :onmouseout => "this.src='/images/ps.png'") %>
+<% end %>
+
+
+

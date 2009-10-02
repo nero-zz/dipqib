@@ -1,0 +1,4 @@
+# TODO Operate on the page object
+page.replace_html("content", :partial => "java")
+page.hide "content"
+page.visual_effect(:appear, :content, :duration => 2.0)

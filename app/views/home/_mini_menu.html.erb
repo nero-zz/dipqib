@@ -1,0 +1,12 @@
+
+<% form_remote_tag :url => { :action => 'ruby'} do %>
+    <%= image_submit_tag("portfolio.png",
+      :onmouseover => "this.src='/images/portfolio_glow.png'",
+      :onmouseout => "this.src='/images/portfolio.png'") %>
+<% end %>
+
+<% form_remote_tag :url => { :action => 'ruby'} do %>
+    <%= image_submit_tag("team.png",
+      :onmouseover => "this.src='/images/team_glow.png'",
+      :onmouseout => "this.src='/images/team.png'") %>
+<% end %>
